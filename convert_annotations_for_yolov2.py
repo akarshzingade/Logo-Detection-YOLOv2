@@ -17,7 +17,7 @@ def convert(size, box):
    h = h*dh
    return (x,y,w,h)
 
-def convert_annotation(input_path, output_path, obj_names_path):
+def convert_annotation(input_path, output_path, obj_names_path,text_filename):
    if not os.path.exists(output_path):
       os.mkdir(output_path)
 
@@ -95,7 +95,7 @@ if __name__ == '__main__':
                        help='A Optional positional argument for obj.names')
    
    parser.add_argument('--text_filename',
-                       help='A Optional positional argument for obj.names')
+                       help='A Optional positional argument for train.txt/test.txt')
 
 
    args = parser.parse_args()
@@ -111,8 +111,7 @@ if __name__ == '__main__':
    
    if (args.obj_names_path is  None):
       args.obj_names_path = './'
-   
    print ("Input Directory: "+args.input_directory)
    print ("Output Directory: "+args.output_directory)
+   print ("Name of the file that contains path to train/test images: "+args.text_filename+'.txt')
    convert_annotation(input_path=args.input_directory, output_path=args.output_directory, obj_names_path=args.obj_names_path,text_filename=args.text_filename)
-
