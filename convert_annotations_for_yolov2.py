@@ -58,11 +58,11 @@ def convert_annotation(input_path, output_path, obj_names_path):
          continue
 
    text = "".join(train_files)
-   f = open('train.txt','w')
+   f = open(os.path.join(obj_names_path,'train.txt'),'w')
    f.write(text)
    f.close()
 
-   f = open('className2ClassID.txt','r')
+   f = open(os.path.join(obj_names_path,'className2ClassID.txt'),'r')
    classes_all = f.read().split('\n')[:-1]
 
    classes =[]
