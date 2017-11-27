@@ -58,7 +58,7 @@ def convert_annotation(input_path, output_path, obj_names_path):
          continue
 
    text = "".join(train_files)
-   f = open(os.path.join(obj_names_path,'train.txt'),'w')
+   f = open(os.path.join(obj_names_path,text_filename+'.txt'),'w')
    f.write(text)
    f.close()
 
@@ -93,6 +93,9 @@ if __name__ == '__main__':
    # Optional positional argument
    parser.add_argument('--obj_names_path',
                        help='A Optional positional argument for obj.names')
+   
+   parser.add_argument('--text_filename',
+                       help='A Optional positional argument for obj.names')
 
 
    args = parser.parse_args()
@@ -111,5 +114,5 @@ if __name__ == '__main__':
    
    print ("Input Directory: "+args.input_directory)
    print ("Output Directory: "+args.output_directory)
-   convert_annotation(input_path=args.input_directory, output_path=args.output_directory, obj_names_path=args.obj_names_path)
+   convert_annotation(input_path=args.input_directory, output_path=args.output_directory, obj_names_path=args.obj_names_path,text_filename=args.text_filename)
 
