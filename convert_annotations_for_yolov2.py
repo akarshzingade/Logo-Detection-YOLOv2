@@ -111,6 +111,10 @@ if __name__ == '__main__':
    
    if (args.obj_names_path is  None):
       args.obj_names_path = './'
+
+   if '.txt' in args.text_filename:
+      args.text_filename = args.text_filename.replace('.txt','')
+   
    print ("Input Directory: "+args.input_directory)
    print ("Output Directory: "+args.output_directory)
    print ("Name of the file that contains path to train/test images: "+args.text_filename+'.txt')
