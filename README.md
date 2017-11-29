@@ -1,5 +1,9 @@
 # Logo Detection using YOLOv2
 
+![alt text](https://cdn-images-1.medium.com/max/1100/1*uLoIU1s-lcvfOMBgRFZ1eg.png "YOLOv2 detection the logo of Google")
+
+
+
 This repository provides the [code](https://github.com/akarshzingade/Logo-Detection-YOLOv2/blob/master/convert_annotations_for_yolov2.py) that converts FlickrLogo-47 Dataset annotations to the format required by YOLOv2. It also has the YOLOv2 [configuration file](https://github.com/akarshzingade/Logo-Detection-YOLOv2/blob/master/yolov2_logo_detection.cfg) used for the Logo Detection. You can read about how YOLOv2 works and how it was used to detect logos in FlickrLogo-47 Dataset in [this](https://medium.com/@akarshzingade/logo-detection-using-yolov2-8cda5a68740e) blog.  
 
 The best weights for logo detection using YOLOv2 can be found [here](https://drive.google.com/open?id=1_Wg2hOKRiqWK6rpbCI6XbNLOC5YT1zyS)
