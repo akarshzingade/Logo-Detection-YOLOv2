@@ -84,7 +84,7 @@ if __name__ == '__main__':
 
    # Optional positional argument
    parser.add_argument('--input_directory', 
-                       help='An Optional required positional argument for input directory')
+                       help='An Optional positional argument for input directory')
 
    # Optional positional argument
    parser.add_argument('--output_directory', 
